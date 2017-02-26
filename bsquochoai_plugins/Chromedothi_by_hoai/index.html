@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html no_gl="true">
+<head>
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+  <!--chrome=1 enables chrome frame; IE=9 keeps IE from rendering in fallback mode.-->
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+  <!--[if lt IE 10 ]>
+  <link rel="stylesheet" href="/assets/build/ie9-67195af6fd1efbdc9cbb99176e5b0fecdafa11f9.min.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9, chrome=1" />
+  <![endif]-->
+
+  <link rel="stylesheet" href="assets/bsquochoai.grapher.min.css" />
+
+  <title>Chrome Đồ Thị 9 by bsquochoai</title>
+
+</head>
+<body
+  data-load-data="{&#34;graph&#34;: null, &#34;seed&#34;: &#34;ffefd0ef2a9246e29e1bf83aa7cb7e22&#34;, &#34;user&#34;: null}"
+  class="dcg-tap-container"
+>
+
+  <!-- LOGIN MODALS -->
+  <div id="modal_background"></div>
+  <div class="modal" id="state-modals">
+      <span class="close-modal dcg-icon-remove"></span>
+  </div>
+
+  <!-- GRAPHER -->
+  <div class="dcg-sliding-interior">
+    <!-- this is where the tools go. leaving div in because I like it aesthetically during load-up -->
+    <div class="dcg-header"></div>
+
+    <div style="position:absolute; top:50%; width:100%; text-align:center" class="dcg-loading-div">
+
+      Đang tải dữ liệu từ bsquochoai.ga...
+
+    </div>
+    <div id="graph-container"></div>
+  </div>
+
+  
+<!-- 1pixel white image for printing in FF -->
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wLEhYhKmtn2wYAAAAidEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVAgb24gYSBNYWOHqHdDAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC" id="whitebg">
+ <!-- 1 white pixel for printing in FF -->
+  
+<style>.dcg-action-removegraph{cursor:pointer}</style>
+  <script src="assets/bsquochoai.init.js"></script>
+  <script src="assets/bsquochoai.calculator.min.js"></script>
+  <script src="assets/bsquochoai.init2.js"></script>
+</body>
+</html>

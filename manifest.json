@@ -1,0 +1,178 @@
+﻿{
+  "manifest_version": 2,
+
+  "name": "I hate Cốc Cốc Chrome || http://bsquochoai.ga",
+  "description": "Cập nhật: ngày 26/5/2015. Các phiên bản mới nhất được cập nhật trên website của thầy http://bsquochoai.ga. Phần mềm nằm trong dự án \"I HATE Cốc Cốc\" của thầy. Bản này: Fix Hack và download video trong hochoctv.com",
+  "version": "670.2",
+  "icons": { "16": "icon/icon16.png",
+           "48": "icon/icon48.png",
+          "128": "icon/icon128.png" },
+  "browser_action": {
+    "default_icon": "icon/icon32.png",
+    "default_popup": "background.html"
+  },
+  
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com https://ssl.google-analytics.com; object-src 'self'",
+   
+  "background": {
+    "persistent": true,
+	  "page": "bsquochoai_plugins/pdfjs_by_hoai/pdfHandler.html"
+  },
+  "permissions": ["tabs","tts","storage","unlimitedStorage","contextMenus","webRequest","webRequestBlocking","downloads" ,"notifications" ,"alarms"
+	,"\u003Call_urls>", "activeTab", "tabCapture", "clipboardWrite",
+	"webNavigation", "bookmarks",
+	 "management", "proxy", "chrome://favicon/"
+	],
+    "content_scripts": [
+	{
+		"matches": ["<all_urls>"],
+		"exclude_matches":["http://web2.0calc.com/*", "*://mega.co.nz/*", "*://mega.nz/*"],
+		"css":["thongbao/allstyle.css", "site/plugins/jqueryui/css/flick/jquery-ui-1.9.2.custom.min.css"],
+      "js": ["jquery.min.js","site/tudien.js", "site/inSite/adsbypass/go.js"],
+		"all_frames":true,
+		"run_at":"document_start"
+    },
+	{
+		"matches": ["*://vivo.vn/*"],
+      "js": ["site/inSite/vivovn/vivo-content.js"],
+		"run_at":"document_start"
+    },
+	{
+		"matches": ["*://hdonline.vn/*","*://*.hdonline.vn/*"],
+      "js": ["site/inSite/hdonline/content.js"],
+		"run_at":"document_end"
+    },
+	{
+		"matches": ["*://hochoctv.com/*"],
+      "js": ["site/inSite/hochoctv/content.js"],
+      "css": ["site/inSite/hochoctv/bs.css"],
+		"run_at":"document_start"
+    },
+	{
+		"matches": ["*://*.dublinbet.com/*"],
+      	"js": ["site/inSite/dublinbet.com/dublinbet.com.js"],
+      	"css": ["site/inSite/dublinbet.com/dublinbet.com.css"]
+    },
+	{
+		"matches": ["*://*.facebook.com/*", "*://facebook.com/*"],
+      "js": ["site/plugins/jqueryui/jquery-ui-1.9.2.custom.min.js", "site/inSite/facebook.com/facebook.js", "site/inSite/facebook.com/facebook_supertool.js"],
+		"run_at":"document_start"
+    },
+	 {
+		"matches": ["*://tv.zing.vn/*"],
+		"js": ["site/inSite/zingtv/content.js"],
+		"run_at":"document_start"
+	 },
+	 {
+		"matches": ["*://movies.hdviet.com/*"],
+		"js": ["site/inSite/hdviet/content.js"],
+		"run_at":"document_start"
+	 },
+	{
+		"matches": ["<all_urls>"],
+      "js": ["jquery.min.js","bsquochoai_plugins/TalkToChrome_codedby_bsquochoai/contents.js"]
+    },
+	{
+		"matches": ["<all_urls>"],
+      "js": ["jquery.min.js", "bsquochoai_plugins/HideUnwanted_codedby_bsquochoai/contents.js"],
+		"css": ["bsquochoai_plugins/HideUnwanted_codedby_bsquochoai/contents.css"],
+		"run_at":"document_start"
+    },
+	 {
+		"matches": ["http://*/*","https://*/*"],
+      "js": ["jquery.min.js", "site/tatquangcaoall.js", "site/AllSiteDownload.js"],
+		"all_frames":true
+    },
+	 {
+		"matches": ["http://mp3.zing.vn/*","https://mp3.zing.vn/*"],
+		"js": ["jquery.min.js", "site/zingmp3.js"]
+	 },
+	 {
+		"matches": ["http://tv.zing.vn/*","https://tv.zing.vn/*"],
+		"js": ["jquery.min.js","site/zingtv.js"]
+	 },
+	 {
+		"matches": ["https://mail.google.com/*","https://mail.google.com/*"],
+		"js": ["jquery.min.js","site/gmail.js"]
+	 },
+	 {
+		"matches": ["*://*.youtube.com/*"],
+		"js": ["jquery.min.js","site/youtube.js","site/inSite/youtube/YouTubePlus.user.js"]
+	 },
+	 {
+		"matches": ["http://*.violet.vn/*","http://violet.vn/*"],
+		"js": ["jquery.min.js","site/violet.vn.js"]
+	 },
+	 {
+		"matches": ["http://web2.0calc.com/*"],
+		"css": ["site/calc.css"]
+	 },
+	 {
+		"matches": ["*://*.scribd.com/*"],
+		"js": ["jquery.min.js","site/scribd.js"]
+	 },
+	 {
+		"matches": ["*://*.mediafire.com/*"],
+		"js": ["jquery.min.js","site/mediafire.js"]
+	 },
+	 {
+		"matches": ["*://movies.hdviet.com/*"],
+		"js": ["jquery.min.js", "site/hdviet.js"]
+	 },
+	 {
+		"matches": ["*://ouo.io/*", "*://ouo.press/*"],
+		"js": ["jquery.min.js", "site/ouo.io.js"]
+	 },
+	 {
+		"matches": ["*://linksvip.net/dl/*"],
+		"js": ["jquery.min.js", "site/linkvips.js"]
+	 },
+	 {
+		"matches": ["*://123doc.org/*"],
+      "js": ["jquery.min.js","site/123doc.js"],
+		"run_at":"document_start"
+    },
+	 {
+		"matches": ["*://*.4shared.com/*"],
+      "js": ["jquery.min.js","site/4shared.com.js"],
+		"run_at":"document_start"
+    }
+  ],
+   "commands": {
+          "battatphanmem": {
+            "suggested_key": {
+              "default": "Alt+Q"
+            },
+            "description": "Bật/Tắt phần mềm"
+          },
+			 "motalktochrome": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+T"
+            },
+            "description": "Mở Talk To Chrome"
+          },
+			 "plugins_pageshotbybsquochoai": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+S"
+            },
+            "description": "Chụp và chỉnh sửa hình chụp trang web hiện tại (Pageshot 9)"
+          },
+			 "plugins_chromedothibybsquochoai": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+D"
+            },
+            "description": "Mở nhanh 'Chrome Đồ thi 9'"
+          }
+        },
+	"web_accessible_resources": [
+    "site/*", "bsquochoai_plugins/*"
+  ],
+  "storage": {
+      "managed_schema": "/bsquochoai_plugins/pdfjs_by_hoai/preferences_schema.json"
+   },
+   "options_page": "background.html",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "background.html"
+   }
+}

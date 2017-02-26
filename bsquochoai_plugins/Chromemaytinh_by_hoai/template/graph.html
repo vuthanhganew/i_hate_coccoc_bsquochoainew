@@ -1,0 +1,80 @@
+﻿<html lang="en">
+
+<body>
+    <div class="modal fade bs-modal-lg gedit" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog wide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>Vẽ đồ thị này chậm mà xấu lắm 
+                                <a class="btn-success"  target="_blank" href="/bsquochoai_plugins/Chromedothi_by_hoai/index.html"><span class="glyphicon glyphicon-heart-empty"></span> Mở Chrome Đồ thị 9 nhanh hơn</a></h4>
+                    <input type="hidden" class="fullscreenurl" value="graphs/new" />
+                </div>
+                <div class="modal-body">
+                    <!DOCTYPE html>
+                    <div class="container graphcontainer">
+                        <div class="row">
+                            <div class="col-md-5 list">
+                                <div class="edit">
+                                    <ul class="rows">
+                                        <li class="row" id="f0">
+                                            <div class="ctrls pull-right">
+                                                <button class="btn btn-xs btn-default down"><span class="glyphicon glyphicon-arrow-down"></span></button>
+                                                <button class="btn btn-xs btn-default up"><span class="glyphicon glyphicon-arrow-up"></span></button>
+                                                <button class="btn btn-xs btn-default delete" title="delete row"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </div><span class="id">f(x)</span>
+                                            <input class="inp" type="text" value="" placeholder="function, example: sin(x)" />
+                                        </li>
+                                        <li class="row" id="f1">
+                                            <div class="ctrls pull-right">
+                                                <button class="btn btn-xs btn-default down"><span class="glyphicon glyphicon-arrow-down"></span></button>
+                                                <button class="btn btn-xs btn-default up"><span class="glyphicon glyphicon-arrow-up"></span></button>
+                                                <button class="btn btn-xs btn-default delete" title="delete row"><span class="glyphicon glyphicon-trash"></span></button>
+                                            </div><span class="id">g(x)</span>
+                                            <input class="inp" type="text" value="" placeholder="" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="graph"><img class="loading" src="img/loading.gif" alt="loading" /><span class="center"></span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 rowctl">
+                                <button class="btn btn-primary addline"><span class="glyphicon glyphicon-plus"></span> thêm hàm</button>
+                                <button class="btn btn-warning pull-right refresh"><span class="glyphicon glyphicon-random"></span > vẽ lun</button><span class="glyphicon glyphicon-trash"></span>
+									</div>
+                            <div class="col-md-7 zoomctl">
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-arrow-left"></span></button>
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-arrow-right"></span></button>
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-arrow-up"></span></button>
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-arrow-down"></span></button>
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-resize-horizontal"></span><sub>+</sub></button>
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-resize-horizontal"></span><sub>-</sub></button>
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-resize-vertical"></span><sub>+</sub></button>
+                                <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-resize-vertical"></span><sub>-</sub></button>
+                                <button title="zoom out" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-zoom-out"></span></button>
+                                <button title="zoom in" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-zoom-in"></span></button>
+                                <button class="btn btn-sm btn-default">xóa hết</button>
+                                <button class="btn btn-primary pull-right refresh"><span class="glyphicon glyphicon-refresh"></span> tải lại</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 rowctl"></div>
+                            <div class="col-md-7">
+                                <br />
+                                <div class="minmax pull-right">
+                                    <div class="text-center"><span class="xmin">x<sub>min</sub> <input type="text" /></span><span class="ymax">y<sub>max</sub> <input type="text" /></span><span class="xmax">x<sub>max</sub> <input type="text" /></span></div>
+                                    <div class="text-center"><span class="ymin">y<sub>min</sub> <input type="text" /></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

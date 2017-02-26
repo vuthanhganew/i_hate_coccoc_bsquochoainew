@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="thongbao/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/bsquochoai_plugins/Global/btm/css/roboto.min.css" rel="stylesheet">
+        <link href="/bsquochoai_plugins/Global/btm/css/material.min.css" rel="stylesheet">
+        <link href="/bsquochoai_plugins/Global/btm/css/ripples.min.css" rel="stylesheet">
+	 
+<style>
+#myTabContent{width:500px; height:500px}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+	color: #262626;
+	text-decoration: none;
+	background-color: #00CFEA;
+}
+#slider{
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.input-group {margin-top:10px}
+</style>
+  </head>
+  <body>
+		  
+	 <div role="tabpanel">
+<div class="tabthongbao" role="tabpanel">
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
+	 <li role="presentation" class="dropdown">
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Phần mềm <span class="caret"></span></a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">	
+		  
+		  <li ><a href="#caidatgiongnoi" tabindex="-1" role="tab" id="caidatgiongnoi-tab" data-toggle="tab" aria-controls="caidatgiongnoi" style="text-transform: uppercase;">I hate Cốc Cốc (Hate)</a></li>
+		  <li ><a href="#pageshot9" tabindex="-1" role="tab" id="pageshot9-tab" data-toggle="tab" aria-controls="pageshot9" data-plugin data-open="/Pageshot_by_hoai/caidat.html">Pageshot 9</a></li>
+		  <li ><a href="#chromedothi" tabindex="-1" role="tab" id="chromedothi-tab" data-toggle="tab" aria-controls="chromedothi" data-plugin data-open="/Chromedothi_by_hoai/huongdan.html">Chrome Đồ thị</a></li>
+		  <li ><a href="#chromemaytinh" tabindex="-1" role="tab" id="chromemaytinh-tab" data-toggle="tab" aria-controls="chromemaytinh" data-plugin data-open="/Chromemaytinh_by_hoai/huongdan.html">Chrome Máy tính</a></li>
+		  <li ><a href="#chromevpn" tabindex="-1" role="tab" id="chromevpn-tab" data-toggle="tab" aria-controls="chromevpn" data-plugin data-open="/ChromeVPN_by_hoai/caidat.html">Chrome VPN <em>(đổi IP)</em></a></li>
+		  <li ><a href="#chromechanquangcao" tabindex="-1" role="tab" id="chromechanquangcao-tab" data-toggle="tab" aria-controls="chromechanquangcao" data-plugin data-open="/ChromeChanQuangCao_codedby_bsquochoai/huongdan.html">Chrome Chặn quảng cáo</a></li>
+		  <li ><a href="#chromepdf" tabindex="-1" role="tab" id="chromepdf-tab" data-toggle="tab" aria-controls="chromepdf" data-plugin data-open="/pdfjs_by_hoai/huongdan.html">Chrome PDF</a></li>
+			 <li><a href="#help" tabindex="-1" role="tab" id="help-tab" data-toggle="tab" aria-controls="help">@Trợ giúp</a></li>
+        </ul>
+      </li>
+        
+      <li  data-toggle="tooltip" data-placement="bottom" title="Mở ngay 'Chrome Đồ thị 9'" style="margin-top:5px" ><button class="" type="button"  data-chrome-openextensionlink data-href="/bsquochoai_plugins/
+		Chromedothi_by_hoai/index.html"> <span class="glyphicons glyphicons-vector-path-polygon"></span>	 </button>
+		</li>
+      <li  data-toggle="tooltip" data-placement="bottom" title="Mở ngay 'Chrome máy tính'" style="margin-top:5px" ><button  type="button" data-chrome-openextensionlink data-href="/bsquochoai_plugins/
+		Chromemaytinh_by_hoai/index.html"> <span class="glyphicons glyphicons-calculator"></span>
+		</li>
+      <li  data-toggle="tooltip" data-placement="bottom" title="Mở ngay 'Pageshot 9'" style="margin-top:5px" ><button type="button" data-chrome-openextensionlink data-href="/bsquochoai_plugins/
+		Pageshot_by_hoai/caidat.html"> <span class="glyphicons glyphicons-crop"></span></span> 
+		</li>
+      <li  data-toggle="tooltip" data-placement="bottom" title="Mở ngay 'Chrome Chặn quảng cáo'" style="margin-top:5px" ><button  type="button" data-chrome-openextensionlink data-href="/bsquochoai_plugins/
+		ChromeChanQuangCao_codedby_bsquochoai/index.html"> <span class="glyphicons glyphicons-ban"></span></span> 
+		</li>
+      <li  data-toggle="tooltip" data-placement="bottom" title="TalkToChrome: ra lệnh cho Chrome" style="margin-top:5px" ><button  type="button" data-chrome-openextensionlink data-href="/bsquochoai_plugins/
+		TalkToChrome_codedby_bsquochoai/index.html"> <span class="glyphicons glyphicons-microphone"></span></span> 
+		</li>
+      
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="lichquay" aria-labelledby="lichquay-tab">
+        <p></p>
+      </div>
+		<div role="tabpanel" class="tab-pane fade in active" id="help" aria-labelledby="help-tab">
+        <h4>Các phím tắt nhanh:</h4>
+		  <ol>
+				<li><p style="font-size: 110%">Hãy <a data-href="chrome://extensions/configureCommands" target="_blank" data-chrome="openLinkInNewTab">ấn vào để <b>cài đặt phím tắt</b></a></p>
+</li>
+				<li>Bật/Tắt từ điển: Alt+Q (quan trọng, nên cài và sử dụng thường xuyên)</li>
+				<li>Mở máy tính Casio: thầy không cài mặc định</li>
+				<li>Mở nhanh 'Chrome Đồ thị': thầy không cài mặc định</li>
+				<li>Pageshot 9: <b>Ctrl+Shift+S</b></li>
+				<li>Nếu đã bật tính năng "Thầy bá đạo tra từ nhanh", em hãy rê chuột lên từ cần tra và ấn nút Ctrl.</li>
+			</ol>
+			<h4>Nhiều phần mềm tích hợp thế thì Chrome có nặng không?</h4>
+			<p>Hoàn toàn không nặng, các ứng dụng đó chỉ chạy khi em mở nó lên mà thôi, và khi chạy thì bộ nhớ chiếm dụng của nó là rất thấp, chỉ như mở 1 tab gmail mà thôi, vì nó chỉ là các đoạn mã nhẹ cực kỳ, mã chỉ chạy lần đầu và được sử dụng trên website.</p>
+			<h4>Hate khi download về có dung lượng lớn hơn xưa rất nhiều?</h4>
+			<p>Đây là do các phần mềm tích hợp có dung lượng file lớn, còn bản chất Hate chỉ chiếm một phần nhỏ dung lượng tập tin em tải về mà thôi. Các ứng dụng tích hợp thầy đều để tại thư mục <b>bsquochoai_plugins</b>, em có thể kiểm tra dung lượng thư mục này để hiểu hơn bản chất.</p>
+			<h4>Tại sao phiên bản sau này Hate có nhiều ứng dụng kèm theo vậy?</h4>
+			<p>Vì thầy muốn Hate trở thành ứng dụng thiết yếu cho người dùng Chrome tại Việt Nam. Ít nhất là trong việc học từ anh văn đến các môn phổ thông, sau đó là làm tăng trãi nghiệm của người dùng khi truy cập internet tại Việt Nam bởi các tính năng nhỏ như chỉnh sửa một số website, chặn quảng cáo,..</p>
+			<h4>Tính năng chặn quảng cáo hoạt động thế nào?</h4>
+			<p>Tính năng chặn quảng cáo của thầy hoạt động chỉ với 4 dòng code cực kỳ cơ bản của trình duyệt Chrome, nó nhẹ nhàng và nhanh chóng hơn Adblock Pro/Plus rất nhiều. Thầy đã nghiên cứu Adblock, danh sách các trang web bị chặn và danh sách các phần tử quảng cáo trên trang web, được Adblock tải từ <b><a href="https://easylist-downloads.adblockplus.org/easylist.txt" target="_blank" title="nhấp vào để xem">easylist</a></b> với dung lượng file này lên đến 1.51Mb và gần 49500 dòng chữ với hơn <b>1 triệu 590 ngàn ký tự</b>, con số này quả thật rất lớn mà thầy khó có thể tưởng tượng được. Theo đó, tính sơ bộ số lượng trang để chặn lên đến vài ngàn trang, điều đó có nghĩa là, mỗi lần truy cập một trang web, Chrome sẽ check hàng ngàn lần để xem trang web đang xem có nằm trong số hàng ngàn trang đã được khai báo để chặn chưa, nếu có thì chặn quảng cáo trang này, nếu không thì thôi. Điều đó dù không thể hiện gì nhiều qua việc làm chậm quá trình lướt web của em, bởi Chrome quá mạnh cơ mà, nhưng ít nhiều gì nó đã có và đơn giản trãi nghiệm web của em đã bị chậm đi. Hơn thế nữa, ở một số trang web khác, ví như trang phim HDViet, cũng có thể phát hiện Adblock và buộc mình phải tắt nó mới cho xem phim. Điều này thật phiền hà.</p>
+			<p>Đối với kỹ thuật chặn quảng cáo "đích danh" của thầy, thì thầy sẽ tìm và thêm các <b>SERVER quảng cáo</b> để chặn mà thôi. Ví dụ server của Google, server của AdsClick,.. Các server này cung cấp quảng cáo cho hàng triệu trang web trên mạng, vì thế chỉ cần chặn server, thì quảng cáo sẽ không được các website thành viên lấy về để hiển thị được. Chỉ đơn giản như thế thì chỉ tìm vài server, mà đã chặn được quảng cáo của vô số các trang khác rồi. Điều này thật thông minh.</p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="liveshowchemgio" aria-labelledby="liveshowchemgio-tab">
+        <!-- <p><iframe src="" style=" border-width:0 " width="500" height="500" frameborder="0" scrolling="no"></iframe></p> -->
+		  <p style="padding: 20px 10px">Em hãy truy cập vào website của thầy để bình luận bên dưới bài hướng dẫn về những suy nghĩ, tính năng cần thêm vào, nâng cấp, và cải thiện nhen.<br/>
+		  Thầy sẽ trực tiếp trả lời các câu hỏi của em ngay trên website luôn nhen. Ý kiến nào ngon, không ngon thầy đều sẽ trả lời nhanh chóng.<br/>
+		  <a href="http://www.bsquochoai.ga/2015/08/huong-dan-cai-at-i-hate-coc-coc-tren_18.html" target="_blank">Hướng dẫn cài đặt I hate cốc cốc trên chrome</a></p>
+      </div>
+		
+		<div role="tabpanel" class="tab-pane fade" id="caidatgiongnoi" aria-labelledby="caidatgiongnoi-tab">
+		<ul class="nav nav-pills" style="margin-top:10px">
+		  <li role="presentation"><button type="button" id="tudahoc"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Vào mục các từ đã học"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Từ đã học</button></li>
+		  <li role="presentation"><button type="button" id="mngoiy"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Gợi ý tính năng mới"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Gợi ý</button></li>
+		  <li role="presentation"><button type="button" id="mnhelp"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Vào mục trợ giúp"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</button></li>
+		</ul>
+		<div id="chonnguondoc" style="margin-top:10px">
+		 <b>Người đọc:</b>
+		 <label class="radio-inline"  data-toggle="tooltip" data-placement="bottom" title="Chọn nguồn đọc bằng Google Translate, có thể đọc được nhiều thứ tiếng khác nhau.">
+		  <input type="radio" name="chonnguondocrad" id="chonnguondocrad1" value="cddocgt"> Google Translate
+		</label>
+		<label class="radio-inline"  data-toggle="tooltip" data-placement="bottom" title="Nguồn được lấy từ dữ liệu đọc của máy tính, đôi lúc hơi lâu để khởi động đọc, nhưng đọc cả câu rất hay, và có nhiều tùy chọn đẹp bên dưới so với Google Translate.">
+		  <input type="radio" name="chonnguondocrad" id="chonnguondocrad1" value="cddocchuan"  data-toggle="tooltip" data-placement="bottom" title=""> Đọc chuẩn người thật
+		</label>
+		</div>
+		<div id="phancaidatgiongnoi" style="margin-left: 20px;">
+			<h4  data-toggle="tooltip" data-placement="bottom" title="Đừng quên khi nhấp chuột phải và trang bất kỳ, chúng ta còn nhiều mục cài đặt hay cho phần mềm nữa">Cài đặt "Đọc chuẩn người thật":</h4>
+		<div class="input-group" id="chongiongnoi"   data-toggle="tooltip" data-placement="bottom" title="Đôi lúc mục này sẽ không có gì để chọn, vì máy tính của em không có sẵn dữ liệu âm thanh trên máy, hãy sử dụng Google Translate nếu khung này trống không">
+			<span class="input-group-addon">Chọn giọng nói: </span>
+		  <select class="form-control">
+        </select>
+		 </div>
+		 <div class="input-group" id="tocdodoc"   data-toggle="tooltip" data-placement="bottom" title="Lợi điểm của cách đọc này là có thể chọn tốc độ đọc nhanh chậm tùy người sử dụng, để học ngoại ngữ tốt hơn.">
+			<span class="input-group-addon">Tốc độ đọc: <span id="updaterate"></span></span>
+		  <div id="slider">
+			<input type="range" name="rate" id="rate" min="0.1" max="2" step="0.1">
+			</div>
+		 </div>
+		 <div class="input-group" id="amthanh"   data-toggle="tooltip" data-placement="bottom" title="Và có thể điều chỉnh được âm lượng nữa">
+			<span class="input-group-addon">Âm lượng: <span id="updatevolume"></span></span>
+		  <div id="slider">
+			<input type="range" name="volume" id="volume" min="0" max="1" step="0.01">
+			</div>
+		 </div>
+		 <h4>Cài đặt "Đọc bằng Google Translate":</h4>
+		 <div class="input-group" id="gtdocngonngu"   data-toggle="tooltip" data-placement="bottom" title="Nhược điểm của Google Translate là không có các cài đặt trên, nhưng bù lại nó đọc rất nhanh khi khối chữ lại và có thể đọc được bất kỳ thứ tiếng nào mà chỉ định bên dưới.">
+			<span class="input-group-addon">Đọc ngôn ngữ: </span>
+		  <select class="form-control" >
+        </select>
+		 </div>
+		 </div>
+		 <h4>Cài đặt "Từ điển":</h4>
+		 <div id="chonnguontudien" style="margin-left:20px"  >
+			 <b>Nguồn dịch:</b>
+			 <label class="radio-inline"  data-toggle="tooltip" data-placement="bottom" title="Sự khác nhau cơ bản của 2 loại nguồn từ điển này là Google Transate có thể dịch được cả câu và các từ ngữ chuyên ngành tốt nhưng lại không có phần phiên âm với tiếng Anh. Các tiếng khác thì có hướng dẫn đọc.">
+			  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="cddichgt"> Google Translate
+			</label>
+			<label class="radio-inline" data-toggle="tooltip" data-placement="bottom" title="Còn nguồn này thì dịch kiểu từ điển Lạc Việt, nhưng số lượng từ ít, và bù lại có phần phiên âm hướng dẫn cách đọc cho người mới học anh văn. Chọn mục này có nghĩa là chỉ học anh văn, các ngôn ngữ khác không thể dịch được.">
+			  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="cddich123"> Có phiên âm (chỉ tiếng anh)
+			</label>
+			</div>
+			 <div class="input-group" id="gttudien" style="margin-left:20px"   data-toggle="tooltip" data-placement="bottom" title="Nếu sử dụng nguồn dịch Google Transate thì lợi điểm nữa là nó có thể tự động phát hiện ngôn nữa và trả về nghĩa của câu từ đó theo loại ngôn ngữ đích đến được chỉ định bên dưới.">
+				<span class="input-group-addon">Tự dịch sang: </span>
+			  <select class="form-control" >
+			  </select>
+			 </div>
+		<h4>Bật tính năng "thầy bá đạo" tra từ nhanh:</h4>
+		<div class="input-group" id="tratunhanh" style="margin-left:20px"   data-toggle="tooltip" data-placement="top" title="Nếu bật tính năng này lên, để tra nhanh từ em hãy rê chuột lên từ cần tra và ấn nút Ctrl là xong. Lưu ý: Tính năng này sẽ làm tăng thời gian load trang web của em lên khoảng 0.5 giây, và đôi khi một số website đời mới sẽ bị thay đổi giao diện rất nhiều vì thầy đã tách từng chữ của trang web nó ra, vì thế hãy mở tính năng này lên khi cần thiết trong việc học. Còn không thì hãy ấn Alt+Q để tắt phần mềm luôn cũng được, khi nào cần xài thì mở lên. Thêm một điều, nhược điểm của nó nữa là mỗi lần nó chỉ có thể tra từng từ mà thôi.">
+				<span class="input-group-addon">Thầy bá đạo (Rê chuột và ấn Ctrl): </span>
+			  <select class="form-control" >
+				<option value='1'>Bật</option>
+				<option value='0'>Tắt</option>
+			  </select>
+			 </div>
+	</div>
+
+		<div role="tabpanel" class="tab-pane fade" id="pageshot9" aria-labelledby="pageshot9-tab">
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="chromedothi" aria-labelledby="chromedothi-tab">
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="chromemaytinh" aria-labelledby="chromemaytinh-tab">
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="chromevpn" aria-labelledby="chromevpn-tab">
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="chromechanquangcao" aria-labelledby="chromechanquangcao-tab">
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="chromepdf" aria-labelledby="chromepdf-tab">
+		</div>
+      </div>
+		
+    </div>
+  </div>
+
+	 
+	 
+    <script src="jquery.min.js"></script>
+	     <script src="thongbao/js/bootstrap.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/btm/js/ripples.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/btm/js/material.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/chrome.ulti.bybsquochoai.js"></script>
+		  <script src="thongbao/background.js"></script>
+
+
+  </body>
+</html>

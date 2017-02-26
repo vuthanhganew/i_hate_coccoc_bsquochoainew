@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<link href='img/icon19.png' rel='icon' type='image/x-icon'/>
+    <link href="/thongbao/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/bsquochoai_plugins/Global/btm/css/roboto.min.css" rel="stylesheet">
+        <link href="/bsquochoai_plugins/Global/btm/css/material.min.css" rel="stylesheet">
+        <link href="/bsquochoai_plugins/Global/btm/css/ripples.min.css" rel="stylesheet">
+	 <style>[data-bsquochoai-tab-content] {display: none;}
+	 .active[data-bsquochoai-tab-content] {display: block;}
+	 #cachinhdaluu .cell span  {
+		 background-color: rgb(14, 135, 247);
+		 position: absolute;
+		 padding: 2px;
+		 color: #FFE506;
+		 text-shadow: black 1px 1px;
+	}
+	 #cachinhdaluu img  {
+		 cursor:pointer
+	}
+	 #cachinhdaluu img:hover  {
+		 border: solid grey 3px;
+	}
+	 #cachinhdaluu .button {
+		position: absolute;    top: -18px;
+    left: 10px;
+	 }
+	[data-chrome]{cursor:pointer}
+	 </style>
+</head>
+
+<body>
+        <header >
+            <div class="clear-float">
+                <a class="place-left" href="#" title="">
+                    <h1>Pageshot 9</h1>
+						  <span class="sub-alt-header">
+								<a href="http://bsquochoai.ga" target="_blank">by bsquochoai.ga</a>
+						  </span>
+                </a>
+            </div>
+
+                <ul class="list-inline alert alert-info" style="font-size: 130%;border-top: solid #D8DBFF 3px;border-bottom: solid #D8DBFF 3px;margin-top: 10px;">
+                    <li><a href="#" data-open="#caidat" data-bsquochoai-tab>cài đặt</a></li>
+                    <li><a href="#" data-open="#cachinhdaluu" data-bsquochoai-tab data-run="cachinhdaluu">các hình đã lưu</a></li>
+                    <li><a href="#" data-open="#huongdan" data-bsquochoai-tab>hướng dẫn</a></li>
+                    <li><a href="#" data-open="#goiytinhnang" data-bsquochoai-tab>gợi ý tính năng</a></li>
+                </ul>
+        </header>
+<div class="main-content">
+	<div id="cachinhdaluu" data-bsquochoai-tab-content >
+				<div class=" container">
+					<div class="row hinh">
+						
+					</div>
+				</div>
+	</div>
+	
+	<div id="huongdan" data-bsquochoai-tab-content >
+		<h3>Hướng dẫn nhanh</h3>
+		<p>Đây là phần mềm chụp trang web trong Chrome, em hãy sử dụng phím tắt <b>Ctrl+Shift+S</b> để xem hoạt động của phần mềm.</p>
+		<p>Một số tính năng đặc sắc của Pageshot 9 là: <ul><li>Chụp nhanh và tìm kiếm hình đó bằng Google nhanh, như: một avatar của ai đó, logo một công ty nào đó, icon web nào đó,..</li><li>Đăng ảnh lên server của thầy, tốc độ nhanh và giữ mãi mãi trên internet (tức link ảnh không bao giờ die), vì thế em có thể nhanh chóng chia sẽ ở khắp mọi nơi trên internet</li></ul></p>
+		<p>Em có thể <a data-href="chrome://extensions/configureCommands" target="_blank" data-chrome="openLinkInNewTab">bấm vào đây để <b>cài đặt phím tắt</b> cho phần mềm</a></p>
+		<h3>Xem thêm các hướng dẫn và các mẹo sử dụng Pageshot khác</h3>
+		<p>Các hướng dẫn và cập nhật thầy đều đăng ở website công bố Pageshot của thầy</p>
+		<h5><a href="http://www.bsquochoai.ga/pageshot9" target="_blank">Truy cập để xem hướng dẫn ngay</a></h5>
+	</div>
+	
+	<div id="caidat" data-bsquochoai-tab-content class="active">
+		<h5>Kích thước <B>TEXT</B>: <input id="bs_pageshot_textfontsize" disabled value="cộng thêm 0px"/></h5>
+		<div class="input-control range full-size">
+			 <input type="range" data-caidat data-localStorage="bs_pageshot_textfontsize"  value="0" max="70">
+		</div>
+		
+		<div style="margin-top: 30px"></div>
+		<h5 >Độ rộng viền của <b>HÌNH CHỮ NHẬT</b>: 
+			 <input id="bs_pageshot_HCNsize" disabled value="cộng thêm 0px"/></h5>
+		<div class="input-control range full-size">
+			 <input type="range" data-caidat data-localStorage="bs_pageshot_HCNsize" max="30" value="0">
+		</div>
+		
+		<div style="margin-top: 30px"></div>
+		<h5 >Upload xong, mở hình ảnh ở tab mới: <label class="switch" style="margin-left:20px">
+			 <input type="checkbox" data-caidat data-localStorage="bs_pageshot_motabmoi_saukhiupload" checked>
+			 <span class="check"></span>
+		</label></h5>
+		
+	</div>
+	
+	<div id="goiytinhnang" data-bsquochoai-tab-content>
+		<h3>Gợi ý tính năng mới</h3>
+		<p>Để góp ý các tính năng mới, gợi ý thêm mục cài đặt, hay bất cứ điều gì khác cho Pageshot, em hãy để lại lời bình luận trong trang công bố Pageshot của thầy</p>
+		<h5><a href="http://www.bsquochoai.ga/pageshot9" target="_blank">Truy cập để bình luận ngay</a></h5>
+	</div>
+</div>
+	 
+    <script src="/jquery.min.js"></script>
+	     <script src="/thongbao/js/bootstrap.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/btm/js/ripples.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/btm/js/material.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/chrome.ulti.bybsquochoai.js"></script>
+    <script src="caidat.js"></script>
+</body>
+
+</html>

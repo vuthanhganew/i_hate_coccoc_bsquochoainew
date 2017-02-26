@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/thongbao/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/btm/css/roboto.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/btm/css/material.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/btm/css/ripples.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/editable/bootstrap-editable.css" rel="stylesheet">
+	 <style>
+		.bs_caclenhdara{height: 320px;overflow: auto;}
+		.bs_caclenhdara p, .bs-lenhcuaem tbody tr{position:relative; display: block}
+		.bs-actionmenu, .bs-lenhmenu{display:inline-block;position: absolute;right: 0px;top: -2px;}
+		.bs-lenhmenu{top: 7px;}
+		.bs-actionmenu i, [data-editable-bybs], .bs-lenhmenu i{cursor:pointer;}
+		.bs-actionmenu i:hover, .bs-lenhmenu i:hover{color:#1ED000;}
+		.hidden{display:none}
+		.bs-disable {
+			 background-color: #7B8669 !important
+		}
+		.bs-lenhcuaem .form-control{display: inline-block;resize:both;font-size: 16px;
+			 font-weight: bold;
+			 /*color: brown;*/
+		}
+		.editable-submit, .editable-cancel {
+			 padding: 2px 8px !important;
+		}
+		.editable-click, a.editable-click, a.editable-click:hover{
+			 text-decoration: none;
+			 border: dashed 1px #0088cc;
+		}
+        .bs-lenhcuaem textarea.form-control{
+            font-size: 14px; color: #0A466B; font-weight: normal; margin: 10px 0px;
+        }
+	 </style>
+	 <title>Talk To Chrome by bsquochoai</title>
+</head>
+
+<body style="padding-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+					 <div class="panel panel-primary" >
+					 <div class="panel-heading">
+						  <h3 class="panel-title">Các lệnh đã ra <small style="color: #DDF7C1;">(trang này phải được mở để nhận âm thanh bất kỳ lúc nào)</small></h3>
+					 </div>
+					 <div class="panel-body">
+						  <div class="alert alert-dismissable alert-danger">
+							 <p class="bs_interim"><b><a target="_blank" href="http://www.bsquochoai.ga/talktochrome">Nhấp để xem hướng dẫn sử dụng và giải nghĩa rõ các lệnh</a></b></p>
+						</div>
+						<div class="bs_caclenhdara">
+						
+						</div>
+					 </div>
+				</div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Cài đặt</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group ">
+                                <label for="cd-ngonngu" class="col-md-4 control-label">Em đọc tiếng</label>
+                                <div class="col-md-8">
+											<select class="form-control  " id="cd-ngonngu" data-caidat-select="ngonngu" >
+                                </select>
+										  <small>Thầy không hỗ trợ các lệnh bằng tiếng anh, chỉ hỗ trợ lệnh được nói bằng tiếng Việt (vi-VN). Vì thế mục English(en-US), được làm ra chỉ để cho các em luyện tập cách đọc tiếng anh sao cho máy hiểu mà thôi.</small>
+										  </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cd-ngonngu" class="col-md-4 control-label"></label>
+                              <div class="checkbox col-md-8">
+                                <label>
+                                  <input type="checkbox" class="form-control" id="cd-tukhoidong" data-caidat-checkbox="tukhoidong" ><span class="checkbox-material"><span class="check"></span></span> Tự khởi động TalkToChrome
+                                </label>
+                                  <p><small>Em có muốn tab TalkToChrome sẽ được mở ra mỗi khi khởi động Chrome không?</small></p>
+
+                              </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+				
+				<h3>Các lệnh của em</h3>
+				<quote>Đây là bộ lệnh do em cài đặt. Để cài đặt lệnh mới, hãy rê chuột lên <u>lệnh đã đọc</u> trong khung <b>Các lệnh đã ra</b> và ấn dấu <i class="bs-icon mdi-content-add-box "></i></quote>
+				<div class="table-responsive">
+				 <table class="simple table table-striped bs-lenhcuaem">
+					  <tbody>
+					  </tbody>
+				 </table>
+			</div>
+
+				<div>
+						<h3>Lệnh mở một trang xác định</h3>
+<quote>Khi đọc <b>chính xác</b> các từ trong này, sẽ mở ngay trang tương ứng</quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>gmail</code> (gờ-meo) hoặc <code>gửi mail</code></td>
+                <td><code>https://gmail.com</code></td>
+            </tr>
+            <tr>
+                <td><code>facebook</code> (phây-bút)</td>
+                <td><code>https://facebook.com</code></td>
+            </tr>
+            <tr>
+                <td><code>youtube</code> (du-túp)</td>
+                <td><code>https://youtube.com</code></td>
+            </tr>
+            <tr>
+                <td><code>học anh văn</code></td>
+                <td><code>http://av.bsquochoai.ga</code></td>
+            </tr>
+            <tr>
+                <td><code>báo tuổi trẻ</code></td>
+                <td><code>http://tuoitre.vn</code></td>
+            </tr>
+            <tr>
+                <td><code>báo 24 giờ</code></td>
+                <td><code>http://www.24h.com.vn/</code></td>
+            </tr>
+            <tr>
+                <td><code>zing mp3</code> (jing-em-bê-ba)</td>
+                <td><code>http://mp3.zing.vn/</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>Bộ lệnh Free-Hand</h3>
+<quote>
+<ul>
+	<li>Phải nói đây là bộ lệnh bá đạo nhất mà thầy từng phát triển, việc lướt web và bình luận mà không cần dùng đến chuột và bàn phím đã hình thành. Như một ông sếp, tựa lưng vào ghế và ra lệnh cho Talk làm mọi thứ Sếp cần.</li>
+	<li>Đây là bộ lệnh để đọc báo, nghe nhạc, facebook, youtube,.. chỉ bằng giọng nói. Và cũng bằng giọng nói để viết bình luận và đăng status.</li>
+	<li>Bộ lệnh này phải kết hợp với các lệnh <code>lên</code> ,<code>xuống</code> và <b>nhiều lệnh quản lý tabs</b> để tăng khả năng quản lý trang web</li>
+	<li>Bộ lệnh gồm các mục: <b>Lệnh hiện/không hiện số hỗ trợ</b>, <b>Lệnh nhấp chuột vào phần tử được chọn</b>, <b>Lệnh điền vào các khung bình luận, status</b></li>
+</ul>
+</quote>
+<h4>Lệnh hiện/không hiện số hỗ trợ</h4>
+<quote>Đây là bộ lệnh dùng để ẩn/hiện các <i>số hỗ trợ trước mỗi đường dẫn</i> trong trang web đang xem, giúp cho chúng ta có thể mở một đường dẫn xác định trong website chỉ bằng cách nói số này lên.
+</quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>tạo hỗ trợ</code></td>
+                <td>Sẽ <b>hiện <u>số</u> trước mỗi đường dẫn trong trang web đang xem</b>. Lúc này em có thể đọc lệnh <code>mở {số}</code> hoặc đơn giản chỉ cần gọi <code>{số}</code> để kêu Talk To Chrome mở đường dẫn mà em cần.
+					 <br/>Các hiệu lệnh tương tự: <code>hiện hỗ trợ</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>xóa hỗ trợ</code></td>
+                <td>Sẽ <b>xóa tất cả các số hỗ trợ đã tạo</b>.
+					 <br/>Các hiệu lệnh tương tự: <code>không hỗ trợ</code>
+					 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<quote><b>Mẹo: </b>
+<ul>
+	<li>Các lệnh khi nói sẽ hoạt động trong tab hiện tại, các tab khác không ảnh hưởng. Tuy nhiên, khi em đã gọi lệnh <code>xóa hỗ trợ</code>, thì các lần tải trang web mới sẽ không hiện các số hỗ trợ lên nữa, trừ khi em gọi lại <code>hiện hỗ trợ</code></li>
+	<li>Một số trang như Facebook, khi em xem thì nội dung của nó sẽ được hiển thị mà không phải tại lại trang web, vì thế chúng ta sẽ không thấy các <u>số hỗ trợ</u> trước mỗi link. Để hiển thị <u>số hỗ trợ</u> cho các đường dẫn chưa có số trong trang hiện tại, em phải gọi lại lệnh <code>hiện hỗ trợ</code></li>
+	<li>Các kiểu hỗ trợ:
+		<br/>Link: sẽ hiện vòng đỏ bên trên link
+		<br/>Khung điền chữ: hiện dạng "K{số}"
+		<br/>Một nút bấm: sẽ chèn thêm "({số})Nội dung button" vào trước nút.
+	</li>
+</ul>
+</quote>
+<h4>Lệnh nhấp chuột vào phần tử được chọn</h4>
+<quote>Đây là bộ lệnh dùng để mở một đường dẫn bất kỳ trong trang web hiện tại chỉ bằng cách <b>gọi số hỗ trợ của nó lên</b>.
+</quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>{số}</code></td>
+                <td>Khi <code>tạo hỗ trợ</code> được bật, hoặc đã ẩn (nếu đã tạo) thì em có thể sử dụng lệnh này để yêu cầu Talk To Chrome mở đường dẫn mà em mong muốn.
+					 <ul>
+							<li>Nếu <code>{số}</code> đó đại diện <u>cho một link:</u> sẽ mở đường dẫn đó.</li>
+							<li>Nếu <code>{số}</code> đó đại diện <u>cho một nút bấm:</u> nhấp vào nút đó. (nút "Gửi", "Đăng", ..)</li>
+							<li>Nếu <code>{số}</code> đó đại diện <u>cho icon:</u> sẽ nhấp vào icon đó. (các icon Thông báo, tin nhắn, quản lý tài khoản,.. trong facebook)</li>
+					 </ul>
+					 
+					 </td>
+            </tr>
+            <tr>
+                <td><code> mở {số}</code></td>
+                <td>Tương tự như đọc <code>{số}</code>. Lệnh này thầy đã thay thế bằng <code>{số}</code> (bỏ qua chữ <code>mở</code>) để tiện bề ra lệnh.
+					 </td>
+            </tr>
+            <tr>
+                <td><code> số {số}</code></td>
+                <td>Tương tự như đọc <code>{số}</code>. Lệnh này được làm ra để đọc các số nhỏ như <code>số 1, số 2, số 6,..</code> vì những số này khi đọc một mình sẽ ra kết quả khó đoán nhu: <code>6 -> xấu, sau,.. 2->hay,..</code> Talk sẽ không hiểu.
+					 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<quote><b><u>Cách đọc số:</u></b>
+<br/>Ví dụ link em chọn đại diện bởi số <u>198</u>: em phải đọc <code>một chín tám</code> chứ không đọc <code>một trăm chín mươi tám</code> vì các đọc này sẽ làm Talk hiểu sai ý em và hiện kết quả lung tung dẫn đến sai sót.
+<br/><b>Ví dụ:</b> đọc <code>sáu hai tám năm</code> sẽ <b>mở link có số hỗ trợ đằng trước là 6285</b>
+</quote>
+<h4>Lệnh điền vào các khung bình luận, status</h4>
+<quote>
+	Đây là bộ lệnh dùng để <b>Chọn và điền</b> vào một khung <i>tìm kiếm</i>, <i>bình luận</i>, <i>status</i>,.. hay bất kỳ phần tử nào có thể điền được bằng bàn phím,.. chỉ bằng lời nói.
+	<br/>Hạn chế đang khắc phục:
+	<ul>
+		<li></li>
+	</ul>
+</quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>{số} {nội dung cần điền}</code></td>
+                <td>Mỗi một khung điền chữ, cũng sẽ có một số hỗ trợ riêng, em đọc theo mẫu <code>{số} {nội dung cần điền}</code> để chèn thêm <code>{nội dung cần điền}</code> vào khung chữ đó.
+						 <ul>
+								<li>Nếu <u>lần đầu</u> em điền vào khung: thì <code>{nội dung cần điền}</code> sẽ được thêm vào và hiển thị trong khung đó.</li>
+								<li>Nếu em gọi tiếp lệnh <code>{số} {nội dung mới}</code> cho khung đó, trong khi nó đã có <code>{nội dung cần điền}</code> sẵn trước đó rồi: thì <code>{nội dung mới}</code> sẽ được chèn thêm vào phía sau <code>{nội dung cần điền}</code> đã có trước đó.</li>
+						 </ul>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>{số} xóa hết</code></td>
+                <td>Lệnh này <b>sẽ xóa hết tất cả</b> các giá trị mà em đã điền bằng <u>bàn phím</u> hoặc bằng <u>Talk</u> hoặc mặc định đã có sẵn của <b>khung điền {số}</b>
+					 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<quote>
+	<b>Hạn chế đang khắc phục:</b>
+	<ul>
+		<li>Chưa thể viết các dấu câu: chấm, phẩy, !, ?, (),..</li>
+	</ul>
+</quote>
+
+<h3>Lệnh tìm kiếm</h3>
+<quote>Những câu Talk To Chrome ghi nhận mà bắt đầu bằng chữ <code>tìm ...</code> hoặc kết thúc với chữ <code>... tìm kiếm</code> thì chrome sẽ xóa bỏ chữ <code>tìm ...</code> hoặc chữ  <code>... tìm kiếm</code> và sử dụng Google để tìm nó.
+<br/><b>Tìm kiếm nâng cao:</b>
+<br/><code>... tìm kiếm hình ảnh</code>: nếu kết thúc bằng 4 chữ này, sẽ hiển thị kết quả Google hình ảnh
+<br/><code>... tìm kiếm video</code> <em>(tìm kiếm vi-đê-ô)</em>: nếu kết thúc bằng 3 chữ này, sẽ hiển thị kết quả Google video
+<br/><code>... tìm kiếm bản đồ</code>: nếu kết thúc bằng 4 chữ này, sẽ tìm trong Google Maps vị trí bạn yêu cầu.
+</quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>tìm ...</code></td>
+                <td>Ví dụ nói <code><u>tìm</u> hạt giống tâm hồn tập 5</code>, một tab mới sẽ hiển thị kết quả tìm kiếm google từ khóa <code>hạt giống tâm hồn tập 5</code></td>
+            </tr>
+            <tr>
+                <td><code>... tìm kiếm</code></td>
+                <td>Ví dụ nói <code>photoshop full crack <u>tìm kiếm</u></code>, một tab mới sẽ hiển thị kết quả tìm kiếm google từ khóa <code>photoshop full crack</code></td>
+            </tr>
+            <tr>
+                <td><code>... tìm kiếm hình ảnh</code></td>
+                <td>Ví dụ nói <code>vẻ đẹp Thúy Kiều <u>tìm kiếm hình ảnh</u></code>, một tab mới sẽ hiển thị kết quả tìm kiếm Google hình ảnh với từ khóa <code>vẻ đẹp Thúy Kiều</code></td>
+            </tr>
+            <tr>
+                <td><code>... tìm kiếm video</code> <em>(vi-đê-ô)</em></td>
+                <td>Ví dụ nói <code>hài hoài linh <u>tìm kiếm vi-đê-ô</u></code>, một tab mới sẽ hiển thị kết quả tìm kiếm Google video với từ khóa <code>hài hoài linh</code></td>
+            </tr>
+            <tr>
+                <td><code>... tìm kiếm bản đồ</code></td>
+                <td>Ví dụ nói <code>bệnh viện Chợ Rẫy <u>tìm kiếm bản đồ</u></code>, một tab mới sẽ hiển thị vị trí của <code>bệnh viện Chợ Rẫy</code> trong Google Maps.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<quote>Mẹo: <code>tìm ...</code> thích hợp với các tìm kiếm tiếng việt thông dụng. Trái lại <code>... tìm kiếm</code> thích hợp với các tình kiếm tiếng anh hơn.</quote>
+<h3>Lệnh mở các trang gốc của Chrome</h3>
+<quote>Bộ lệnh này được nhận diện bởi câu nói bắt đầu bằng 1 trong 4 chữ: <code>cờ rôm</code>, <code>chrome</code> <em>(đọc là "cờ-rom")</em>, <code>rom</code> <em>(đọc là "rôm")</em> hoặc <code>crom</code> <em>(đọc là "kờ-rôm")</em>. Lý do của sự bất tiện này là Talk To Chrome chưa hiểu nổi chữ <code>cờ rom</code> ở Việt Nam, nó sẽ nhận diện lung tung, nhưng nhìn chung khi đọc <code>cờ rom</code> thì nó sẽ hiển thị một trong 4 kiểu chữ này.</quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>kờ-rom tải xuống</code> hoặc <code>kờ-rom download</code> <em>(đao-lót)</em></td>
+                <td>Sẽ mở <b>trang tải xuống</b> của trình duyệt Chrome: <code>chrome://downloads/</code></td>
+            </tr>
+            <tr>
+                <td><code>kờ-rom cài đặt</code></td>
+                <td>Sẽ mở <b>trang cài đặt</b> của trình duyệt Chrome: <code>chrome://settings/</code></td>
+            </tr>
+            <tr>
+                <td><code>kờ-rom lịch sử</code></td>
+                <td>Sẽ mở <b>trang lịch sử duyệt web</b> của trình duyệt Chrome: <code>chrome://history/</code></td>
+            </tr>
+            <tr>
+                <td><code>kờ-rom phần mở rộng</code> hoặc <code>kờ-rom extension</code> <em>(ịt-tén-sần)</em></td>
+                <td>Sẽ mở <b>trang quản lý extension</b> (trang cài I hate Cốc Cốc) của trình duyệt Chrome: <code>chrome://extensions/</code></td>
+            </tr>
+            <tr>
+                <td><code>kờ-rom phím tắt</code></td>
+                <td>Sẽ mở <b>trang cài đặt phím tắt</b> cho các extensions của trình duyệt Chrome: <code>chrome://extensions/configureCommands</code>. (Lệnh này đọc kỹ và rõ từng chữ, nếu không nó sẽ ra kết quả kỳ lắm ^^)</td>
+            </tr>
+            <tr>
+                <td><code>kờ-rom bút máy</code></td>
+                <td>Sẽ mở <b>trang bookmarks</b> là trang chứa tập hợp các trang mà em đã lưu lại: <code>chrome://bookmarks/</code>. (Vì Talk To Chrome không hiểu cách đọc chữ <code>"Bookmarks"</code> nên thầy đã thay từ đọc gần giống với nó là <code>"bút máy"</code>)</td>
+            </tr>
+            <tr>
+                <td><code>kờ-rom các ứng dụng</code></td>
+                <td>Sẽ mở <b>trang apps</b> là trang chứa các ứng dụng của trình duyệt Chrome: <code>chrome://apps/</code>. (Xem hình: http://i.imgur.com/GCUJlRU.png)</td>
+            </tr>
+            <tr>
+                <td><code>kờ-rom phiên bản</code></td>
+                <td>Sẽ mở <b>trang kiểm tra phiên bản</b> hiện tại của trình duyệt Chrome em đang xài: <code>chrome://chrome/</code>. (Xem hình: http://i.imgur.com/4IAjLR8.png)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3>Lệnh mở ứng dụng của I Hate Cốc Cốc</h3>
+<quote>Đây là lệnh dành cho Hate cũng như các lệnh mà em cài đặt. Lệnh này bắt đầu bằng chữ <code>mở ...</code></quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>mở máy tính</code></td>
+                <td>Sẽ mở <b>Chrome Máy tính</b> là phần mềm máy tính casio với các tính năng nhanh và vượt trội của Hate</td>
+            </tr>
+            <tr>
+                <td><code>mở đồ thị</code></td>
+                <td>Sẽ mở <b>Chrome Đồ thị</b> là phần mềm vẽ đồ thị cực nhanh và cực đẹp của Hate</td>
+            </tr>
+            <tr>
+                <td><code>mở màn hình</code></td>
+                <td>Sẽ mở <b>Chrome Pageshot9</b>:  ngay lập tức chụp tab của em lại.</td>
+            </tr>
+            <tr>
+                <td><code>mở từ điển</code></td>
+                <td>Sẽ mở/tắt <b>tính năng từ điển</b>, là tính năng khối chữ lại sẽ tự đọc và dịch chữ đó của I hate Cốc Cốc. Nếu tính năng từ điển đang mở thì khi đọc lệnh này, nó sẽ tắt và ngược lại nếu đang tắt thì sẽ tự động mở lại.</td>
+            </tr>
+            <tr>
+                <td><code>mở đổi ip</code> <em>(đọc là: ai-fi)</em></td>
+                <td>Sẽ mở/tắt <b>tính năng từ điển</b>, là tính năng khối chữ lại sẽ tự đọc và dịch chữ đó của I hate Cốc Cốc</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3>Lệnh kéo trang web lên xuống</h3>
+<quote>Đây là bộ lệnh dùng ra lệnh cho trang web đang xem đi lênh hoặc đi xuống, phóng to hoặc thu nhỏ lại và vài tính năng khác nữa. Lệnh này bắt đầu bằng chữ <code>kéo ...</code>. Một số trang web sẽ không hoạt động khi gọi lệnh này vì trang web đó không có thanh trượt, hoặc có thanh trượt nhưng nó cố định.</quote>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>kéo lên</code></td>
+                <td>Sẽ kéo trang web đang xem <b>lên trên</b> một đoạn
+					 <br/>Các hiệu lệnh tương tự:<code>lên</code>, <code>lan</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>kéo xuống</code> hoặc <code>kiểu súng</code> </td>
+                <td>Sẽ kéo trang web đang xem <b>xuống dưới</b> một đoạn
+					 <br/>Các hiệu lệnh tương tự:<code>xuống</code>, <code>súng</code>, <code>sống</code>, <code>sóng</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>kéo lên cùng</code></td>
+                <td>Sẽ kéo trang web đang xem <b>lên đầu</b> (top)
+					 <br/>Các hiệu lệnh tương tự:<code>lên trên cùng</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>kéo dưới cùng</code></td>
+                <td>Sẽ kéo trang web đang xem <b>xuống dưới cùng</b> (bottom).
+					 <br/>Các hiệu lệnh tương tự:<code>xuống dưới cùng</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>kéo vào</code></td>
+                <td>Sẽ <b>phóng to 20%</b> trang web đang xem (Zoom in +20%)
+					 <br/>Các hiệu lệnh tương tự: <code>phóng to</code>, <code>zoom in</code> <em>(đọc: jjum-in)</em>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>kéo ra</code></td>
+                <td>Sẽ <b>thu nhỏ 20%</b> trang web đang xem (Zoom out -20%)
+					 <br/>Các hiệu lệnh tương tự: <code>thu nhỏ</code>, <code>zoom out</code> <em>(đọc: jjum-ao)</em>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>kéo về</code>
+                <td>Sẽ hủy toàn bộ lệnh Zoom, tức là trả lại vị trí ban đầu của tab hiện tại, hay nói cách khác tab hiện tại không còn bị Zoom nữa (Zoom 0%)
+					 <br/>Các hiệu lệnh tương tự: <code>không phóng</code>, <code>cá vàng</code>, <code>kéo vàng</code>, <code>kể về</code>, <code>theo về</code>
+					 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3>Lệnh quản lý tabs</h3>
+<quote>Đây là bộ lệnh dùng để tắt mở một tab, hoặc nhiều tab cùng lúc. Bộ lệnh này chia làm 3 phần:
+<br/><b>Lệnh mở tab:</b> mở một tab hiện có trong cửa sổ Chrome của em, lệnh này bắt đầu bằng <code>mở tập...</code> hoặc <code>mở táp ...</code>
+<br/><b>Lệnh đóng tab:</b> đóng một tab hoặc đóng toàn bộ các tab
+<br/><b>Lệnh xử lý tab:</b> tải lại, tải lại tất cả, trở lại tab trước, đi tới tab sau, (lưu lại) bookmarks, in tab (print), ghim tab (pin tab), mở lại tab vừa tắt, reload lại tất cả các tab đang xem.
+</quote>
+<h4>Bộ lệnh mở tab</h4>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>mở tập 1|2|3...</code></td>
+                <td>sẽ <b>mở tab tương ứng thứ 1|2|3|4|...</b> trong cửa sổ Chrome hiện tại.
+					 <br/>Lệnh tương tự: <code>mở <u>táp</u> 1|2|3...</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>mở tập trước</code></td>
+                <td>sẽ <b>mở tab đứng trước tab đang xem</b> trong cửa sổ Chrome hiện tại. </td>
+            </tr>
+            <tr>
+                <td><code>mở tập 66</code> <em>(sấu-sấu)</em></td>
+                <td>sẽ <b>mở tab đứng sau tab đang xem</b> trong cửa sổ Chrome hiện tại. Do Talk To Chrome không hiểu chữ <code>sau</code>, dù thầy đọc cỡ nào đi nữa nó cũng nhận chữ <code>sau</code> thành số <code>6</code>, vì thế thầy đã dùng <code>tab 66</code> để lừa gạt nó hiểu thành <code>tab sau</code>, và may mắn thay ít ai bốc lột chrome đến nổi mở hơn 65 tabs cả.</td>
+            </tr>
+            <tr>
+                <td><code>mở cửa sổ lên</code></td>
+                <td>sẽ mở cửa sổ Chrome từ bên dưới thanh taskbar của em hiện. (chế độ maximize)
+					 <br/>Các hiệu lệnh tương tự:<code>mở cửa sổ lan</code>, <code>mở cơ sở lên</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>mở full màng hình</code> <em>(-fhun-)</em></td>
+                <td>sẽ mở tab hiện tại ở chế độ toàn màng hình. (chế độ fullscreen)
+					 <br/>Các hiệu lệnh tương tự: <code>mở toàn màn hình</code>, <code>mở full screen</code> , <code>mở to màn hình</code> 
+					 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<quote>Khuyên em sử dụng <code>mở tập 1|2|3..</code>, vì TalkToChrome dễ nhận diện chữ này hơn.</quote>
+<h4>Bộ lệnh đóng tab</h4>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>đóng tập trước</code></td>
+                <td>sẽ <b>tắt tab đứng trước tab đang xem</b> trong cửa sổ Chrome hiện tại. </td>
+            </tr>
+            <tr>
+                <td><code>đóng tập 66</code> <em>(sấu-sấu)</em></td>
+                <td>sẽ <b>đóng tab đứng sau tab đang xem</b> trong cửa sổ Chrome hiện tại.</td>
+            </tr>
+            <tr>
+                <td><code>đóng hết bên trái</code></td>
+                <td>sẽ đóng toàn bộ các tab ở bên trái tab hiện tại (ngoại trừ tab TalkToChrome).</td>
+            </tr>
+            <tr>
+                <td><code>đóng hết bên phải</code></td>
+                <td>sẽ đóng toàn bộ các tab ở bên phải tab hiện tại (ngoại trừ tab TalkToChrome).
+					 <br/>Các lệnh tương tự: <code>đồng hồ bên phải</code>, <code>tổng hợp bên phải</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>đóng tab này</code></td>
+                <td>sẽ đóng tab em đang xem lại (kể cả tab TalkToChrome).
+					 <br/>Các lệnh tương tự: <code>đóng cái này</code>, <code>đóng tập này</code>, <code>động tác này</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>đóng toàn bộ</code></td>
+                <td>sẽ đóng toàn bộ các tab ở hai phía tab hiện tại (giữ lại tab đang xem và tab TalkToChrome).</td>
+            </tr>
+            <tr>
+                <td><code>đóng cửa sổ</code></td>
+                <td>sẽ tắt window (cửa sổ) Chrome đang đang xem (đóng hết toàn bộ tab).
+					 <br/>Các lệnh tương tự: <code>đóng cửa khẩu</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>đóng cửa sổ xuống</code></td>
+                <td>sẽ thu nhỏ cửa sổ Chrome đang đang xem xuống thanh công cụ, chế độ minimize (thanh taskbar màu xanh dương, bên dưới màng hình của em).
+					 <br/>Các lệnh tương tự: <code>đóng cửa sổ súng</code>, <code>đóng cửa sổ xố</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>đóng full màng hình</code> <em>(-fhun-)</em></td>
+                <td>đóng chế độ toàn màng hình của tab hiện tại. (thoát chế độ fullscreen)
+					 <br/>Các lệnh tương tự: <code>đóng toàn màng hình</code>, <code>đóng full screen</code>, <code>đóng tàu màn hình</code>, <code>động full màn hình</code>
+					 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h4>Bộ lệnh xử lý tab</h4>
+<div class="table-responsive">
+    <table class="simple table table-striped ">
+        <tbody>
+            <tr>
+                <th>Đọc</th>
+                <th>Hành động</th>
+            </tr>
+            <tr>
+                <td><code>tải lại</code></td>
+                <td>sẽ <b>reload lại</b> trang web đang xem. </td>
+            </tr>
+            <tr>
+                <td><code>tải lại tất cả</code></td>
+                <td>sẽ <b>reload lại tất cả</b> các trang web đang xem trong cửa sổ Chrome hiện tại. </td>
+            </tr>
+            <tr>
+                <td><code>quay lại</code></td>
+                <td>sẽ <b>quay lại</b> trang trước của tab hiện tại (nếu có). </td>
+            </tr>
+            <tr>
+                <td><code>quay lại 1|2|3..</code></td>
+                <td>sẽ <b>quay lại 1|2|3.. lần</b> các trang trước của tab hiện tại (nếu có). </td>
+            </tr>
+            <tr>
+                <td><code>tiến lên</code></td>
+                <td>sẽ <b>tiến lên</b> trang sau của tab hiện tại (nếu có). </td>
+            </tr>
+            <tr>
+                <td><code>tiến lên 1|2|3..</code></td>
+                <td>sẽ <b>tiến lên 1|2|3.. lần</b> trang trước của tab hiện tại (nếu có). </td>
+            </tr>
+            <tr>
+                <td><code>lưu lại</code></td>
+                <td>sẽ <b>bookmarks</b> trang đang xem lại.
+					 <br/>Các lệnh tương tự: <code>lưu tập</code>, <code>lưu tab</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>lưu lại tất cả</code></td>
+                <td>sẽ <b>bookmarks</b> tất cả các trang đang xem trong cửa sổ Chrome hiện tại lại. </td>
+            </tr>
+            <tr>
+                <td><code>in</code> <em>(đọc: in <s>not inh</s>)</em></td>
+                <td>sẽ <b>print (in)</b> trang đang xem.
+					 <br/>Đọc là <code>in trong tin tin</code> chứ <b>không phải đọc</b> <code>inh trong tinh tinh</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>khóa tập</code></td>
+                <td>sẽ <b>pin tab</b> ghim trang đang xem lại.
+					 <br/>Các lệnh tương tự: <code>khóa cặp</code>, <code>hoa tập</code>, <code>khóa tab</code>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>im lặng</code></td>
+                <td>sẽ <b>tắt âm thanh tab hiện tại</b>
+					 <br>Lưu ý: mặc định tính năng này không được bật, em phải truy cập <b>chrome://flags/#enable-tab-audio-muting</b> để bật nó lên.</br>
+					 </td>
+            </tr>
+            <tr>
+                <td><code>mở tab mới đóng</code></td>
+                <td>sẽ <b>mở lại tab mà em vừa tắt</b>. </td>
+            </tr>
+            <tr>
+                <td><code>mở tab mới đóng 1|2|3..</code></td>
+                <td>sẽ <b>mở lại tab mà em vừa tắt thứ 1|2|3..</b> kể từ tab hiện tại. </td>
+            </tr>
+            <tr>
+                <td><code>mở 1|2|3.. tab mới đóng</code></td>
+                <td>sẽ <b>mở lại 1|2|3.. tabs gần nhất mà em vừa tắt</b>. </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+            </div>
+				
+				</div>
+				
+        </div>
+
+    </div>
+
+    <script src="/jquery.min.js"></script>
+    <script src="/thongbao/js/bootstrap.min.js"></script>
+    <script src="/bsquochoai_plugins/Global/editable/bootstrap-editable.min.js"></script>
+    <script src="/bsquochoai_plugins/Global/btm/js/ripples.min.js"></script>
+    <script src="/bsquochoai_plugins/Global/btm/js/material.min.js"></script>
+    <script src="/bsquochoai_plugins/Global/chrome.ulti.bybsquochoai.js"></script>
+    <script src="bsquochoai.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/thongbao/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/btm/css/roboto.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/btm/css/material.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/btm/css/ripples.min.css" rel="stylesheet">
+    <link href="/bsquochoai_plugins/Global/toastr.min.css" rel="stylesheet">
+</head>
+
+<body style="padding-top:40px">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Cài đặt các địa chỉ chặn quảng cáo</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="bsqc_serverquangcao" class="control-label">Chặn các server sau:</label>
+                                <div>
+                                    <textarea class="form-control" rows="14" id="bsqc_serverquangcao" data-chrome-input="server" style="font-size:80%"></textarea>
+                                    <span class="help-block">Danh sách các server hoặc tên miền bị chặn, mỗi địa chỉ cách nhau bởi dấu ","</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bsqc_chantieude" class="control-label">Chặn các trang mà tiêu đề chứa các chữ sau:</label>
+                                <div>
+                                    <textarea class="form-control" rows="4" id="bsqc_chantieude" data-chrome-input="title"></textarea>
+                                    <span class="help-block">Chỉ cần tiêu đề của trang có chứa một trong các chữ trên thì trang đó ngay lập tức không được hiển thị khi truy cập, mỗi tiêu đề cách nhau bởi dấu ","</span>
+                                    <b>(Chức năng Chặn tiêu đề thầy đang hoàn thiện)</b>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button data-chrome-function="save, reload" class="btn btn-primary" id="bsqc_apdung" title="Lưu các cài đặt phía trên của em" data-toggle="tooltip">Áp dụng cài đặt</button>
+                                <!-- <button data-chrome-function="save, capnhat" class="btn btn-warning" id="bsqc_capnhat" title="Cập nhật các server chặn quảng cáo mới từ thầy" data-toggle="tooltip">Cập nhật servers</button> -->
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="alert alert-dismissable alert-warning">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <h4>Cẩn thận!</h4>
+                    <p>Chỉ sửa các thông tin khi và chỉ khi em chắc chắn em đã điền đúng theo mẫu thầy hướng dẫn, vì chỉ cần sai một ký tự hay một dấu nhỏ nào đó thì quảng cáo của tất cả các trang sẽ không được chặn và Hate sẽ ngừng hoạt động hoàn toàn, hay nhẹ hơn là địa chỉ mà em khai báo sẽ không bị chặn như mong muốn. </p>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Các điều cần lưu ý:</h4>
+                        <ul>
+                            <li>Mỗi tên miền phải cách nhau bởi dấu "," (dấu phẩy), em có thể xuống dòng để điền tên miền cho dễ nhìn, nhưng trước khi xuống dòng, hãy để dấu "," lại.</li>
+                            <li>Bất kỳ ký tự nào nằm trong các dấu ngoặc ( ) [ ] { } đều sẽ không được tính.</li>
+                            <li>Dấu "*" nghĩa là đúng với bất kỳ ký tự nào, kể cả * không là gì. Em hãy xem bảng ví dụ bên dưới để hiểu rõ hơn</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="simple table table-striped ">
+                    <tbody>
+                        <tr>
+                            <th >Dạng</th>
+                            <th >Nghĩa là</th>
+                            <th >Ví dụ sẽ bị chặn</th>
+                            <th >Ví dụ không bị chặn</th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code>http://*/*</code>
+                            </td>
+
+                            <td>Chặn bất kỳ URL nào bắt đầu với <code>http://</code></td>
+                            <td>
+                                <b>http</b>://www.google.com/
+                                <br> <b>http</b>://bsquochoai.ga/foo/bar.html
+                            </td>
+                            <td><b><u>https</u></b>://google.com/
+                                <br/><b><u>file</u></b>:///C://Users/bsquochoainew/input.pdf</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code>http://*/foo*</code>
+                            </td>
+
+                            <td>
+                                Chặn các URL bắt đầu bằng <code>http</code>, ở bất kỳ tên miền nào, mà đường dẫn bắt đầu với <code>/foo</code>
+                            </td>
+
+                            <td>
+                                <b>http</b>://bsquochoai.ga<b>/foo</b>/bar.html
+                                <br> <b>http</b>://www.google.com<b>/foo</b>
+                                <b></b>
+                            </td>
+                            <td><b>http</b>://bsquochoai.ga<b><u>/notfoo</u></b>/bar.html
+                                <br/><b><u>https</u></b>://bsquochoai.ga<b><u>/foo</u></b>/bar.html
+                                <br/><b><u>https</u></b>://bsquochoai.ga/bar.html
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code>https://*.google.com/foo*bar </code>
+                            </td>
+
+                            <td>
+                                Chặn các URL bắt đầu với <code>https</code>, ở tên miền google.com (như là www.google.com, docs.google.com, hoặc <b>google.com</b>), mà đường dẫn phải bắt đầu với <code>/foo</code> và kết thúc với <code>bar</code>
+                            </td>
+
+                            <td>
+                                http://www.google.com<b>/foo</b>/ilove/bsquochoai/<b>bar</b>
+                                <br> http://docs.google.com<b>/foobar</b>
+                            </td>
+                            <td>
+                                http://www.<b><u>bsquochoai</u></b>.com<b>/foo</b>/ilove/bsquochoai/<b>bar</b>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code>http://example.org/foo/bar.html </code>
+                            </td>
+
+                            <td>Không có dấu *, điều này chỉ chặn khi tên miền giống y chang dạng khai báo mà thôi </td>
+
+                            <td>
+                                Chỉ chặn với <b>http://example.org/foo/bar.html</b>
+                            </td>
+                            <td>
+                                http://example.org/foo/bar<b><u>1</u></b>.html
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code>file:///foo*</code>
+                            </td>
+
+                            <td>Chặn tất cả các file mở bằng Chrome, mà bắt đầu với <code>/foo</code>
+                            </td>
+
+                            <td>
+                                <b>file:///foo</b>/bar.html
+                                <br><b>file:///foo</b>
+                            </td>
+                            <td>
+                                <b>file:///<u>fuu</u></b>/bar.html
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>file:///*.pdf </code>
+                            </td>
+                            <td>Chặn mở file .pdf từ Chrome</td>
+                            <td><b>file:///</b>C://users/bsquochoainew/huongdan<b>.pdf</b></td>
+                            <td>file:///C://users/bsquochoainew/huongdan.<b><u>docx</u></b></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code>http://127.0.0.1/*</code>
+                            </td>
+
+                            <td>
+                                Chặn tất cả các trang trang bắt đầu với <code>http</code> ở tên miền 127.0.0.1
+                            </td>
+                            <td>
+                                <b>http://127.0.0.1/</b>
+                                <br> <b>http://127.0.0.1/</b>foo/bar.html
+                            </td>
+                            <td><b>http://127.0.0.<u>111</u>/</b></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code>*://mail.google.com/* </code>
+                            </td>
+
+                            <td>
+                                Chặn tất cả các tên miền bắt đầu với
+                                <code><b>http</b>://mail.google.com</code> hoặc
+                                <code><b>https</b>://mail.google.com</code>.
+                            </td>
+
+                            <td>
+                                <b>http</b>://mail.google.com/foo/baz/bar
+                                <br> <b>https</b>://mail.google.com/foobar
+                            </td>
+                            <td><b>http</b>://mail.<b><u>googless</u></b>.com/foo/baz/bar</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="simple table table-striped">
+                    <tbody>
+                        <tr>
+                            <th >Các dạng sai, Hate sẽ bị lỗi phần mềm "Chrome Chặn quảng cáo"</th>
+                            <th >Tại sao sai</th>
+                            <th >Sửa lại</th>
+                        </tr>
+
+                        <tr>
+                            <td><code>http://www.google.com</code></td>
+                            <td>Thiếu dấu <code>/</code> ở cuối tên miền</td>
+                            <td><code>http://www.google.com<b><u>/</u></b></code>
+                                <br/><code>http://www.google.com<b><u>/*</u></b></code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><code>http://*foo/bar</code></td>
+                            <td>'*' ở trong <em>tên miền</em> chỉ có thể <u>theo sau</u> dấu '.' hoặc dấu '/'</td>
+                            <td><code>http://<b><u>*.</u></b>foo/bar</code>
+                                <br/><code>http://foo.com<b><u>/*</u></b>/bar</code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><code>http://foo.*.bar/baz&nbsp; </code></td>
+                            <td>Nếu mà dấu '*' trong tên miền, thì nó phải là ký tự đầu tiên</td>
+                            <td><code>http://<b><u>*.</u></b>foo.bar/baz/* </code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>http:/bar</code></td>
+                            <td>Sai dấu <b>//</b>, phải là <b>//</b> chứ không phải chỉ có 1 dấu <b>/</b></td>
+                            <td><code>http:<b><u>//</u></b>bar</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>foo://*/*</code></td>
+                            <td>Sai dạng bắt đầu của tên miền, chỉ chấp nhận <code>'*' | 'http' | 'https' | 'file' | 'ftp'</code> trong đó <code>* = http hoặc https, không có file và ftp</code></td>
+                            <td><code>*://*/*</code> <em>Chặn tất cả các trang web bắt đầu với <code>http và https</code></em>
+                                <code>ftp://*/*</code>
+                                <code>https://*/*</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>*://*</code></td>
+                            <td>Thiếu dấu <code>/</code> ở cuối tên miền</td>
+                            <td><code>*://*/*</code>
+                                <br/><code>*://*/</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/jquery.min.js"></script>
+        <script src="/thongbao/js/bootstrap.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/btm/js/material.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/btm/js/ripples.min.js"></script>
+        <script src="/bsquochoai_plugins/Global/chrome.ulti.bybsquochoai.js"></script>
+        <script src="/bsquochoai_plugins/Global/toastr.min.js"></script>
+        <script src="bsquochoai.js"></script>
+</body>
+
+</html>

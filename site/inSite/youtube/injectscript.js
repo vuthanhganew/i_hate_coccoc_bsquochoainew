@@ -1,0 +1,1 @@
+$("body").append('<script src="'+chrome.extension.getURL('site/inSite/youtube/change_player_time.js')+'"></script>')

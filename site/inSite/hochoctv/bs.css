@@ -1,0 +1,3 @@
+.mconfirm-popup.tn-popup-in[id^=confirm_]{
+	display:none !important;
+}

@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="en" class=" calc accordion socialbar" data-time="1441859185">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Trần Quốc Hoài" />
+    <link rel="stylesheet" href="bsquochoai.calc.css" />
+<link href='img/favicon.ico' rel='icon' type='image/x-icon'/>
+    <meta name="generator" content="0calc8.5" />
+    <title>Chrome Máy tính</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+</head>
+
+<body>
+    </div>
+    <div class="calccontainer">
+        <div id="display">
+            <div><img id="graph" class="img-responsive" alt="" src="img/empty.png" /><img id="preview" class="img-responsive" alt="" src="img/empty.png" /><img id="result" class="img-responsive" alt="" src="img/empty.png" /><span id="error"></span></div>
+        </div>
+        <div class="center">
+            <div class="inputs">
+                <input id="syntax" type="text" value="">
+                <input id="input" type="text" autocomplete="off" name="input" value="" tabindex="1" placeholder="Nên nhập từ bàn phím của em cho nhanh">
+                <div id="inputhelper"><span class="title">&#160;</span><span class="glyphicon glyphicon-indent-left" title="input helpers"></span></div>
+            </div>
+            <div class="helper"></div>
+            <div id="btns" class="btns">
+                <div class="subcmd">
+                    <button id="Btn2nd" class="f"><span>SHIFT</span></button>
+                    <button title="Hằng số Pi≈3.14" id="BtnPi" class="f"><span>π<sup>         số π</sup></span><span class="sec">const</span></button>
+                    <button id="BtnVar" class="f br"><span><strong>x</strong><sup>biến▼</sup></span><span class="sec">var</span></button>
+                    <button id="Btn1X" class="o"><span>1/x<sup>%</sup></span><span class="sec">%</span></button>
+                    <button title="Ví dụ: 3*e (e là số Euler), 10e6 (e là *10^..), 3.5e9" id="BtnE" class="br o"><span>e<sup>i</sup></span><span class="sec">i</span></button>
+                    <button id="BtnParanL" class="bl"><span>(<sup>[</sup></span><span class="sec">[</span></button>
+                    <button id="BtnColon" class="">,</button>
+                    <button id="BtnParanR" class="br"><span>)<sup>]</sup></span><span class="sec">]</span></button>
+                    <button title="Di chuyển chuột" id="BtnLeft" class=""><i class="leftright glyphicon glyphicon-transfer"></i><i class="left glyphicon glyphicon-arrow-left"></i><i class="right glyphicon glyphicon-arrow-right"></i></button>
+                    <button title="Xóa từng ký tự" id="BtnBack" class=""><i class="glyphicon glyphicon-share-alt"></i></button>
+                </div>
+                <div>
+                    <button title="Sine, sin(x)" id="BtnSin" class="f"><span>sin<sup>-1</sup></span><span title="Arc Sinus (sin^-1), asin(x)" class="sec">asin</span></button>
+                    <button title="Hyperbolic Sine, sinh(x)" id="BtnSinH" class="f"><span>sinh<sup>-1</sup></span><span title="Arc Hyperbolic Sinus, asinh(x)" class="sec">asinh</span></button>
+                    <button title="Cotangent, cot(x)" id="BtnCot" class="f br"><span>cot<sup>-1</sup></span><span class="sec">acot</span></button>
+                    <button title="căn bậc y của x, sqrt(x, y)" id="BtnSqrtY" class="o"><i>y</i><b>√</b>x</button>
+                    <button title="Raise to Higher Power, x^y" id="BtnPowXY" class="br o">x<i>y</i></button>
+                    <button id="Btn7" class="bl">7</button>
+                    <button id="Btn8" class="">8</button>
+                    <button id="Btn9" class="br">9</button>
+                    <button id="BtnDiv" class="op"><span>÷</span><span title="Modulo - tìm số dư, x mod y  Ví dụ: 123^345 mod 127" class="sec">mod</span></button>
+                    <button id="BtnClear" class="op" title="Xóa hết (Ctrl+Shift+X)">C</button>
+                </div>
+                <div>
+                    <button title="Cosine, cos(x)" id="BtnCos" class="f"><span>cos<sup>-1</sup></span><span title="Arc Cosine (cos^-1), acos(x)" class="sec">acos</span></button>
+                    <button title="Hyperbolic Cosine, cosh(x)" id="BtnCosH" class="f"><span>cosh<sup>-1</sup></span><span title="Arc Hyperbolic Cosine, acosh(x)" class="sec">acosh</span></button>
+                    <button title="Secant, sec(x)" id="BtnSec" class="f br"><span>sec<sup>-1</sup></span><span class="sec">asec</span></button>
+                    <button title="x mũ 3, sqrt3(x)" id="BtnSqrt3" class="o"><i>3</i><b>√</b>x</button>
+                    <button id="BtnPow3" class="br o">x<i>3</i></button>
+                    <button id="Btn4" class="bl">4</button>
+                    <button id="Btn5" class="">5</button>
+                    <button id="Btn6" class="br">6</button>
+                    <button id="BtnMult" class="op"><span>×</span><span title="Định thức bậc 3, ví dụ: (1, 2, 3)#(4, 5, -6)" class="sec">#</span></button>
+                    <p>
+                        <button id="BtnCalc" class="op">=</button>
+                        <button id="BtnCalcHex" class="op">=<sub>hex</sub></button>
+                    </p>
+                </div>
+                <div>
+                    <button title="Tangent, tan(x)" id="BtnTan" class="f"><span>tan<sup>-1</sup></span><span title="Arc Tangent (tan^-1), atan(x)" class="sec">atan</span></button>
+                    <button title="Hyperbolic Tangent, tanh(x)" id="BtnTanH" class="f"><span>tanh<sup>-1</sup></span><span title="Arc Hyperbolic Tangent, atanh(x)" class="sec">atanh</span></button>
+                    <button title="Cosecant, csc(x)" id="BtnCsc" class="f br"><span>csc<sup>-1</sup></span><span class="sec">acsc</span></button>
+                    <button title="x mũ 2, sqrt(x)" id="BtnSqrt" class="o"><b>√</b>x</button>
+                    <button id="BtnPow2" class="br o">x<i>2</i></button>
+                    <button id="Btn1" class="bl">1</button>
+                    <button id="Btn2" class="">2</button>
+                    <button id="Btn3" class="br">3</button>
+                    <button id="BtnMinus" class="op">-</button>
+                    <p>
+                        <button id="BtnCalcBin" class="op">=<sub>bin</sub></button>
+                    </p>
+                </div>
+                <div>
+                    <button title="Tổ hợp của n chập r, ncr(n, r)   Ví dụ: ncr(49, 6)" id="BtnNcR" class="f">ncr</button>
+                    <button title="Tổ hợp của n chập r, npr(n, r)   Ví dụ: npr(7, 3)" id="BtnNpR" class="f">npr</button>
+                    <button title="Giai thừa, x!  Ví dụ: 5!" id="BtnFactorial" class="f br">!</button>
+                    <button title="Logarit cơ số 10 của x, log(x) hoặc cơ số y, log(x, y)" id="BtnLog10" class="o">log</button>
+                    <button id="BtnPow10" class="br o">10<i>x</i></button>
+                    <button id="Btn0" class="bl">0</button>
+                    <button id="BtnSign" class="">±</button>
+                    <button id="BtnDot" class="br">.</button>
+                    <button id="BtnPlus" class="op">+</button>
+                    <p>
+                        <button id="BtnCalcDec" class="op">=<sub>dec</sub></button>
+                        <button title="Dấu '=' phương trình, Ví dụ: x^2+2x-2=0" id="BtnCalcEqual" class="op">x=y</button>
+                    </p>
+                </div>
+                <div class="dropdowns nonprogrammer">
+                    <button class="f"></button>
+                    <button class="f"></button>
+                    <button class="f br"></button>
+                    <button class="o" id="BtnOpD1"><i class="glyphicon glyphicon-chevron-down"></i></button>
+                    <button class="o br" id="BtnOpD2"><i class="glyphicon glyphicon-chevron-down"></i></button>
+                    <button class="bl"></button>
+                    <button class=""></button>
+                    <button class="br"></button>
+                    <button class="op"></button>
+                    <button class="op"></button>
+                </div>
+                <div class="btnpop nonprogrammer">
+                    <button title="Logarit cơ số e của x (log-nê-be), ln(x)" id="ButtonLn" class="o">ln</button>
+                    <button title="Hàm mũ, exp(x), e^x" id="ButtonExp" class="o">e<i>x</i></button>
+                    <button title="Logarit cơ số 2 của x, lg2(x)" id="ButtonLg2" class="o">lg2</button>
+                    <button id="Button2X" class="o">2<i>x</i></button>
+                </div>
+                <hr class="programmer">
+                <div class="programmer">
+                    <button id="BtnOr" class="f">or</button>
+                    <button id="BtnAnd" class="f">and</button>
+                    <button id="BtnXor" class="f br">xor</button>
+                    <button title="Logarit cơ số e của x, ln(x)" id="ButtonLn_1" class="o">ln</button>
+                    <button title="Hàm mũ, exp(x), e^x" id="ButtonExp_1" class="o br">e<i>x</i></button>
+                    <button id="BtnHexA" class="bl">A</button>
+                    <button id="BtnHexB" class="">B</button>
+                    <button id="BtnHexC" class="br">C</button>
+                    <button id="Btn0b" class="op">0b</button>
+                    <p>
+                        <button id="BtnCalcHex_1" class="op">=<sub>hex</sub></button>
+                    </p>
+                </div>
+                <div class="programmer">
+                    <button title="Left Shift, x shl y" id="BtnLsh" class="f"><span>lsh<sup>rol</sup></span><span title="Rotate Left, x rol y" class="sec">rol</span></button>
+                    <button title="Right Shift, x rsh y" id="BtnRsh" class="f"><span>rsh<sup>ror</sup></span><span title="Rotate Right, x ror y" class="sec">ror</span></button>
+                    <button id="BtnDummy4" class="f br"></button>
+                    <button title="Logarit cơ số 2 của x, lg2(x)" id="ButtonLg2_1" class="o">lg2</button>
+                    <button id="Button2X_1" class="o br">2<i>x</i></button>
+                    <button id="BtnHexD" class="bl">D</button>
+                    <button id="BtnHexE" class="">E</button>
+                    <button id="BtnHexF" class="br">F</button>
+                    <button id="Btn0x" class="op">0x</button>
+                    <p>
+                        <button id="BtnCalcBin_1" class="op">=<sub>bin</sub></button>
+                    </p>
+                </div>
+                <div class="dropdowns programmer">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="btn-group" id="quicklink">
+                    <button class="btn action" type="button"><span class="glyphicon glyphicon-screenshot"></span> vẽ đồ thị</button>
+                    <button class="btn dropdown-toggle pull-right" type="button"><span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-chevron-up"></span></button>
+                </div>
+                <label title="Degree" class="option"> <span class="pull-right"> <input type="radio" value="deg" checked="checked" name="radi" id="trigodeg"> <span class="desc"> <span class="label">Độ</span> <span class="sym">360º</span></span>
+                    </span>
+                </label>
+                <label title="Radian" class="option">
+                    <input type="radio" value="rad" name="radi" id="trigorad"> <span class="desc"><span class="label">Rad</span> <span class="sym">2π</span></span>
+                </label>
+                <div id="hist" class="history btn-group">
+                    <button type="button" class="last btn">-- Lịch sử --</button>
+                    <button type="button" class="btn dropdown-toggle pull-right"><span class="glyphicon glyphicon-chevron-down"></span> <span class="glyphicon glyphicon-chevron-up"></span></button>
+                    <div id="histframe" class="init">
+                        <button type="button" class="close">&times;</button><a href="#" id="clearhistory"><b>XÓA HẾT LỊCH SỬ</b></a>
+                        <ul></ul>
+                    </div>
+                </div>
+                <button class="btn btn-default btn-sm no" type="button"><span class="glyphicon glyphicon-arrow-down"></span></button>
+                <button class="btn btn-default btn-sm no" type="button"><span class="glyphicon glyphicon-arrow-up"></span></button>
+            </div>
+        </div>
+		  <a target="_blank" href="http://www.bsquochoai.ga/chromemaytinh"><img alt="logo" class="logo-default" src="https://bsquochoai-anhvan-files-1.appspot.com/f/assets/admin/layout4/img/logo-light.png"></a>
+    </div>
+    <ul id="inputhelpermenu" role="menu" class="dropdown-menu">
+        <li class="active"><a class="scientific" href="#">Khoa học</a></li>
+        <li><a class="programmer" href="#">Lập trình</a></li>
+        <li class="divider"></li>
+        <li class="dropdown-header">Giúp đỡ nhập liệu</li>
+        <!-- <li><a class="fraction" href="#">Phân số</a></li> -->
+        <li><a class="solver" href="#">Giải phương trình</a></li>
+        <!-- <li><a class="vector" href="#">Vectors/Matrices</a></li> -->
+        <li><a class="unit" href="#">Chuyển đổi đơn vị</a></li>
+    </ul>
+    <div class="dropdown-menu" id="quicklinkframe" style="display: none;">
+        <ul role="menu">
+            <li class="active graph" data-over="graph"><a href="#"><span class="glyphicon glyphicon-screenshot"></span> tạo đồ thị Calc</a></li>
+        </ul>
+    </div>
+    <ul id="displaycontextmenu" class="dropdown-menu">
+        <li><a class="precision" title="0" href="#">Auto <span class="glyphicon glyphicon-ok"></span></a></li>
+        <li><a class="precision" title="12" href="#">12 số </a></li>
+        <li><a class="precision" title="18" href="#">18 số </a></li>
+        <li><a class="precision" title="24" href="#">24 số </a></li>
+        <li><a class="precision" title="30" href="#">30 số </a></li>
+        <li><a class="precision" title="48" href="#">48 số </a></li>
+        <li><a class="precision" title="60" href="#">60 số </a></li>
+        <li class="divider"></li>
+        <li><a class="scientific" href="#">Dạng chuẩn (0.00011) <span class="glyphicon glyphicon-ok"></span></a></li>
+        <li><a class="scientific yes" href="#">Dạng khoa học (1.1*10<sup>-4</sup>) </a></li>
+    </ul>
+    <script src="bsquochoai.calc.js" type="text/javascript"></script>
+
+</body>
+
+</html>
